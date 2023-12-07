@@ -57,9 +57,9 @@ for hand, bid in zip(hands,bids):
     else:
         no_joker_hand = hand.replace('J','')
         p_no_joker_hand = parse_hand(no_joker_hand,cdict_joker)
-        phand = parse_hand(hand,cdict_joker)
         enum = sorted(Counter(p_no_joker_hand).values())
         enum[-1] += num_jokers
+    phand = parse_hand(hand,cdict_joker)
     if enum == [5]:
         hand_bids.append(list(phand+10**7)+[bid])
     elif enum == [1,4]:
