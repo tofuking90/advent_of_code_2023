@@ -14,7 +14,7 @@ for num in nums:
     while True:
         this_num = arr[-1]
         arr.append([this_num[j]-this_num[j-1] for j in range(1,len(this_num))])
-        if sum(arr[-1]) == 0:
+        if sum([np.abs(n) for n in arr[-1]]) == 0:
             break
     c += sum([x[-1] for x in arr])
 
@@ -26,7 +26,7 @@ for num in nums:
     while True:
         this_num = arr[-1]
         arr.append([this_num[j]-this_num[j-1] for j in range(1,len(this_num))])
-        if sum(arr[-1]) == 0:
+        if sum([np.abs(n) for n in arr[-1]]) == 0:
             break
     c += sum([arr[n][0]*(-1)**n for n in range(len(arr))])
 
