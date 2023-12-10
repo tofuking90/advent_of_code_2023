@@ -19,7 +19,7 @@ cur_sym = 'S'
 next_dict1 = {'S':np.array([0,1]),'F':np.array([1,0]), 'L':np.array([-1,0]),'J':np.array([-1,0]),'7':np.array([1,0]),'|':np.array([1,0]),'-':np.array([0,-1])}
 next_dict2 = {'S':np.array([1,0]),'F':np.array([0,1]), 'L':np.array([0,1]),'J':np.array([0,-1]),'7':np.array([0,-1]),'|':np.array([-1,0]),'-':np.array([0,1])}
 c = 0
-map01 = [[0]*len(txt[0])]*len(txt)
+mapdot = [['.' for x in range(len(txt[0]))] for x in range(len(txt))]
 while True:
     # print(cur_sym)
     next_pos = cur_pos + next_dict1[cur_sym]
