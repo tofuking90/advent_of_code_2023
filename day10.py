@@ -31,7 +31,7 @@ while True:
     mapdot[cur_pos[0]][cur_pos[1]] = cur_sym
     c += 1
     if cur_sym == 'S':
-        mapdot[cur_pos[0]][cur_pos[1]] = 'F'
+        mapdot[cur_pos[0]][cur_pos[1]] = '-'
         break
 
 print(int(c/2))
