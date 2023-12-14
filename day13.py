@@ -1,15 +1,6 @@
 ##### Day 13 #####
 import numpy as np
-mats = []
-with open('day13.txt','r') as f:
-    mat = []
-    for line in f:
-        if line.strip() == '':
-            mats.append(mat)
-            mat = []
-        else:
-            mat.append(line.strip())
-    mats.append(mat)
+mats2 = [mat.splitlines() for mat in open('day13.txt','r').read().split('\n\n')]
 
 def h_mirror(mat,s): # 0 for a, 1 for b
     n_rows = len(mat)
